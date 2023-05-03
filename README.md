@@ -5,6 +5,8 @@ Auto-GPT-Todoist plugin transforms your task management experience, helping you 
 
 
 
+
+![Alt Text](https://i.imgur.com/bYlbXjx.png)
 ### Plugin Installation Steps
 
 for Linux, depending on distro
