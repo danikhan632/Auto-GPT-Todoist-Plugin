@@ -7,5 +7,4 @@ wheel
 setuptools
 build
 twine
-dateparser
-todoist_api_python
+todoist-api-python

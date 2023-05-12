@@ -1,7 +1,6 @@
 import os
 from todoist_api_python.api import TodoistAPI
 from datetime import datetime
-import dateparser
 def proj_to_dict(proj): return { 'id': proj.id, 'name': proj.name, 'is_favorite': proj.is_favorite, 'is_inbox_project': proj.is_inbox_project, 'is_shared': proj.is_shared, }
 def qtask_to_dict(quickadd_result): return { 'task': task_to_dict(quickadd_result.task), 'resolved_project_name': quickadd_result.resolved_project_name}
 def task_to_dict(task): return { 'id': task.id, 'content': task.content, 'created_at': task.created_at, 'priority': task.priority, 'project_id': task.project_id, 'section_id': task.section_id }
@@ -100,7 +99,6 @@ class Client:
         return section_to_dict(self.api.add_section(name=name, project_id=project_id))
 
     def add_task(self, content, project_id=None, due=None):
-        due = str(dateparser.parse(due).isoformat())
         kwargs = {'content': content}
         if project_id:
             kwargs['project_id'] = project_id

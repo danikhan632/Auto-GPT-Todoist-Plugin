@@ -1,4 +1,4 @@
-"""This is a plugin to use Auto-GPT with Todoist."""
+"""This is a plugin to use Auto-GPT with Todoist"""
 from typing import Any, Dict, List, Optional, Tuple, TypeVar, TypedDict
 from auto_gpt_plugin_template import AutoGPTPluginTemplate
 
