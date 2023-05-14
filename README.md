@@ -1,33 +1,39 @@
-# Auto-GPT-Plugin-Template
-A starting point for developing your own external plug-in for Auto-GPT
+# Auto-GPT-Todoist
 
-# **If you want your plugin to live within the codebase, use the example in the [plugins repo](https://github.com/Significant-Gravitas/Auto-GPT-Plugins) instead**
 
+Auto-GPT-Todoist plugin transforms your task management experience, helping you stay organized, focused, and productive like never before.
+
+
+
+
+![Alt Text](https://i.imgur.com/bYlbXjx.png)
 ### Plugin Installation Steps
 
-1. **Clone or download the plugin repository:**
-   Clone the plugin repository, or download the repository as a zip file.
-  
-   ![Download Zip](https://raw.githubusercontent.com/BillSchumacher/Auto-GPT/master/plugin.png)
+for Linux, depending on distro
+```
+sudo apt-get install zip
+apk add zip
+sudo pacman -S zip
+sudo yum install zip
+```
+Mac / Linux / WSL
+```
+cd plugins && git clone https://github.com/danikhan632/Auto-GPT-Todoist-Plugin.git && zip -r ./Auto-GPT-Todoist-Plugin.zip ./Auto-GPT-Todoist-Plugin && rm -rf ./Auto-GPT-Todoist-Plugin && cd .. && ./run.sh --install-plugin-deps
 
-2. **Install the plugin's dependencies (if any):**
-   Navigate to the plugin's folder in your terminal, and run the following command to install any required dependencies:
+```
+Windows, Powershell
+```
+cd plugins; git clone https://github.com/danikhan632/Auto-GPT-Todoist-Plugin.git; Compress-Archive -Path .\Auto-GPT-Todoist-Plugin -DestinationPath .\Auto-GPT-Todoist-Plugin.zip; Remove-Item -Recurse -Force .\Auto-GPT-Todoist-Plugin; cd ..
+```
 
-   ``` shell
-      pip install -r requirements.txt
-   ```
 
-3. **Package the plugin as a Zip file:**
-   If you cloned the repository, compress the plugin folder as a Zip file.
-
-4. **Copy the plugin's Zip file:**
-   Place the plugin's Zip file in the `plugins` folder of the Auto-GPT repository.
 
 5. **Allowlist the plugin (optional):**
    Add the plugin's class name to the `ALLOWLISTED_PLUGINS` in the `.env` file to avoid being prompted with a warning when loading the plugin:
 
    ``` shell
-   ALLOWLISTED_PLUGINS=example-plugin1,example-plugin2,example-plugin3
+   ALLOWLISTED_PLUGINS=AutoGPT-Todoist-Plugin
+   TODOIST_TOKEN=Your_api_token
    ```
 
    If the plugin is not allowlisted, you will be warned before it's loaded.
